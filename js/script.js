@@ -1,11 +1,10 @@
-alert(`While drawing the snowflake, you will have an on-screen indicator that locates the centre of the drawing and lines that show the symmetry and thickness of the brush. Once you export the image to another tab (instructions below), the indicators will disappear and the image will no longer be cut.
+"use strict";
 
-
-Remember that symmetry is represented as a green line on the right of the screen and that you can change it with 'w' or 'W'.
-Also that the thickness is represented as a blue line at the bottom of the window and that you can change it with 'q' or 'Q'.
-
-With 'e' or 'E', you can erase your snowflake.
-If you press 's' or 'S' a new tab will appear with the image. You can download that image by pressing 's' or 'S' again.`);
+/**************************************************
+xmas 2020 snowflake maker
+code by https://editor.p5js.org/Clipi/sketches/HEWqeH_XD
+reworked by me
+**************************************************/
 
 let symmetry = 6; //The symmetry to be used
 let angle;
@@ -46,21 +45,13 @@ function drawSetup() { // Set the canvas and the graphic
   strokeWeight(largest / 30);
   stroke(255);
   point(width / 2, height / 2);
-  // g.background(51); // Don't draw the background for the graphic, so it is transparent
+  g.background(44, 89, 105); // Don't draw the background for the graphic, so it is transparent
   g.stroke(255);
 
   let x = map(strokeW, 1, largest / 30, 0, width);
   let y = map(symmetry, 3, 20, height, 0);
 
   strokeWeight(1);
-
-  // stroke(0, 0, 200);
-  // line(width * 0.95, y, width, y);
-  //
-  // stroke(0, 0, 100);
-  // line(x, height * 0.95, x, height);
-
-  stroke(255);
 
   loop();
 }
@@ -102,6 +93,7 @@ function draw() {
 
     }
   }
+  
 
   if (mouseIsPressed) {
     g.reset(); //There is no default ResetMatrix() that acts on each 'draw' for the graphics (but there is for the canvas, so it is not necessary to do the same for it)
