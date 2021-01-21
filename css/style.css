@@ -2,4 +2,66 @@ body {
   padding: 0;
   margin: 0;
   overflow: hidden;
+  font-family: Verdana, sans-serif;
+  font-size: 1em;
+}
+
+h1 {
+  font-size: 1.75em;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 1.25em;
+  padding-top: 30px;
+}
+
+p {
+  line-height: 1.5em;
+}
+
+label[for="toggle"] {
+  position: absolute;
+  bottom: 40px;
+  right: 0;
+  z-index: 1;
+  cursor: pointer;
+  padding: 10px;
+  background-color: darkred;
+}
+
+#toggle {
+  display: none;
+}
+
+.sliding-panel {
+  display: flex;
+}
+
+.return-arrow {
+  width: 20px;
+  background-color: darkred;
+}
+
+.help-text {
+  padding: 15px 15px 10px;
+}
+
+aside {
+  background-color: darkred;
+  color: #eeeeee;
+
+  width: 340px;
+  padding: 0;
+
+  position: fixed;
+  top: 0;
+  right: -370px;
+
+  transition: 0.6s all;
+}
+
+#toggle:checked + aside {
+  right: 0px;
 }

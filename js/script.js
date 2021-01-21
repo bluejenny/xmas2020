@@ -40,12 +40,12 @@ function drawSetup() { // Set the canvas and the graphic
   angleMode(DEGREES); //Set the angle mode to degrees
   g.angleMode(DEGREES); //Set the angle mode to degrees
 
-  background(44, 89, 105);
+  background(76, 182, 235);
   fill(44, 89, 105);
   strokeWeight(largest / 30);
   stroke(255);
   point(width / 2, height / 2);
-  g.background(44, 89, 105); // Don't draw the background for the graphic, so it is transparent
+  g.background(76, 182, 235); // Don't draw the background for the graphic, so it is transparent
   g.stroke(255);
 
   let x = map(strokeW, 1, largest / 30, 0, width);
@@ -93,7 +93,7 @@ function draw() {
 
     }
   }
-  
+
 
   if (mouseIsPressed) {
     g.reset(); //There is no default ResetMatrix() that acts on each 'draw' for the graphics (but there is for the canvas, so it is not necessary to do the same for it)
